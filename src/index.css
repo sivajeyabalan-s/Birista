@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: rgb(0,0,0);
+  --card: rgb(30,30,30);
+  --card-2: rgb(34,34,34);
+  --card-3: rgb(57,57,57);
+  --brown: rgb(100,39,22);
+  --brown-light: rgb(208,129,107);
+  --cream: rgb(255,237,219);
+  --gold: rgb(197,150,27);
+  --gold-2: rgb(199,185,105);
+  --text-muted: rgb(187,187,187);
+  --text-muted-2: rgb(198,198,198);
+  --divider: rgb(58,57,64);
+  --green: rgb(4,159,43);
+
+  --serif-display: 'Cormorant Garamond', 'Trajan Pro 3', 'Marcellus', serif;
+  --serif: 'Marcellus', serif;
+  --sans: 'Jost', sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--sans);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ── Shared atoms ── */
+.serif { font-family: var(--serif); }
+.serif-display { font-family: var(--serif-display); font-weight: 700; letter-spacing: 0.01em; }
+
+.brown-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 40px;
+  border-radius: 24px;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background:
+    url(/assets/btn-texture.png) center / 200% no-repeat,
+    linear-gradient(rgb(100,39,22), rgb(100,39,22));
+  background-blend-mode: overlay;
+  box-shadow:
+    0 42px 107px 0 rgba(100,39,22,0.35),
+    inset 0 1px 4px 2px rgba(255,237,219,0.95),
+    inset 0 1px 18px 2px rgba(255,237,219,0.6);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.brown-btn:hover { transform: translateY(-1px); box-shadow: 0 50px 120px 0 rgba(100,39,22,0.5), inset 0 1px 4px 2px rgba(255,237,219,0.95), inset 0 1px 18px 2px rgba(255,237,219,0.7); }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    -1px 3px 6px 0 rgba(0,0,0,0.08),
+    -3px 11px 11px 0 rgba(0,0,0,0.07),
+    -7px 24px 15px 0 rgba(0,0,0,0.04);
+}
+
+.ornament {
+  display: block;
+  margin: 12px auto 0;
+  width: 119px;
+  height: 17px;
+  background: url(/assets/ornament.png) center / contain no-repeat;
+  transform: scaleY(-1);
+}
+
+.section-title {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 48px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* ────────────────── ORNAMENT UTILITY ────────────────── */
+.title-block {
+  text-align: center;
+}
+.title-block .ornament {
+  width: 119px;
+  height: 17px;
+  margin: 16px auto 0;
+  background: url(/assets/ornament.png) center / contain no-repeat;
+  transform: scaleY(-1);
+}
+.title-block.wide .ornament { width: 367px; height: 56px; }
+.title-block.thin .ornament { width: 107px; height: 16px; }
+

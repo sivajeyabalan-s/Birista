@@ -1,0 +1,48 @@
+/* ──────────────── SPECIALS ──────────────── */
+.specials {
+  padding: 96px 40px 0;
+}
+.specials-grid {
+  display: grid;
+  grid-template-columns: 300px 300px 390px 300px;
+  gap: 24px;
+  align-items: center;
+  margin-top: 56px;
+}
+.special {
+  height: 420px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    -2px 4px 10px 0 rgba(145,145,145,0.05),
+    -7px 17px 18px 0 rgba(145,145,145,0.04),
+    -15px 37px 24px 0 rgba(145,145,145,0.03);
+}
+.special.s1 { background-image: url(/assets/special-1.jpg); }
+.special.s2 { background-image: url(/assets/special-2.jpg); }
+.special.s3 {
+  height: 450px;
+  background-image: url(/assets/special-3.jpg);
+  border: 1px solid var(--gold);
+  position: relative;
+}
+.special.s3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.special.s3 .play {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+.special.s3 .play svg {
+  fill: #fff;
+  stroke: none;
+}
+.special.s4 { background-image: url(/assets/special-4.jpg); }

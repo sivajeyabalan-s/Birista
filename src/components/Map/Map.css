@@ -1,0 +1,9 @@
+/* ──────────────── MAP ──────────────── */
+.map-wrap {
+  margin: 96px 39px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 336px;
+  background: url(/assets/map.jpg) center / cover no-repeat;
+  border: 1px solid rgba(255,255,255,0.06);
+}

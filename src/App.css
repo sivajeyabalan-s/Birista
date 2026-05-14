@@ -1,0 +1,12 @@
+/* ── Scale-to-viewport wrapper ── */
+.site {
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bg);
+}
+
+/* ──────────── responsive scale ──────────── */
+@media (max-width: 1480px) {
+  .site { transform-origin: top center; }
+}

@@ -1,0 +1,29 @@
+/* ──────────────── GALLERY ──────────────── */
+.gallery {
+  padding: 96px 0 0;
+}
+.gallery h2 { margin-bottom: 24px; }
+.gallery-row {
+  display: flex;
+  gap: 0;
+  margin-top: 24px;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-row .tile {
+  flex: 1;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--text-muted);
+  filter: saturate(1.05);
+}
+.gallery-row.row-1 .tile:nth-child(1) { background-image: url(/assets/gallery-1.jpg); }
+.gallery-row.row-1 .tile:nth-child(2) { background-image: url(/assets/special-1.jpg); }
+.gallery-row.row-1 .tile:nth-child(3) { background-image: url(/assets/special-2.jpg); }
+.gallery-row.row-1 .tile:nth-child(4) { background-image: url(/assets/menu-featured.jpg); }
+.gallery-row.row-2 { transform: translateX(-106px); width: calc(100% + 212px); }
+.gallery-row.row-2 .tile:nth-child(1) { background-image: url(/assets/gallery-2.jpg); }
+.gallery-row.row-2 .tile:nth-child(2) { background-image: url(/assets/special-4.jpg); }
+.gallery-row.row-2 .tile:nth-child(3) { background-image: url(/assets/menu-card.jpg); }
+.gallery-row.row-2 .tile:nth-child(4) { background-image: url(/assets/about-1.jpg); }

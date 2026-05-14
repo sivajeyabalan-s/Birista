@@ -1,0 +1,51 @@
+/* ──────────────── NAV ──────────────── */
+.nav {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  z-index: 10;
+}
+.nav .logo {
+  width: 100px;
+  height: 87px;
+  background: url(/assets/logo.png) center / contain no-repeat;
+}
+.nav-pill {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    -1px 3px 6px 0 rgba(0,0,0,0.08),
+    -7px 24px 15px 0 rgba(0,0,0,0.04);
+}
+.nav-pill a {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color .2s;
+}
+.nav-pill a:hover { color: var(--gold-2); }
+.nav-pill a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--gold-2);
+  border-radius: 50%;
+}
