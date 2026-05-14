@@ -227,9 +227,12 @@ const MenuPage = () => {
           <span className="mp-logo-sub">HOUSE</span>
         </a>
         <div className="mp-nav-links">
-          {navLinks.map(l => (
-            <a key={l} href={l === 'Home' ? '/' : l === 'Menu' ? '/menu' : '#'} className={l === 'Menu' ? 'active' : ''}>{l}</a>
-          ))}
+          {navLinks.map(l => {
+            const href = l === 'Home' ? '/' : l === 'Menu' ? '/menu' : `/#${l.toLowerCase().replace(' ', '')}`;
+            return (
+              <a key={l} href={href} className={l === 'Menu' ? 'active' : ''}>{l}</a>
+            );
+          })}
         </div>
         <button className="mp-nav-cta">Order Online</button>
         <button className={`mp-hamburger ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle Menu">
@@ -240,9 +243,12 @@ const MenuPage = () => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && <div className="mp-backdrop" onClick={() => setMobileMenuOpen(false)} />}
       <div className={`mp-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        {navLinks.map(l => (
-          <a key={l} href={l === 'Home' ? '/' : l === 'Menu' ? '/menu' : '#'} onClick={() => setMobileMenuOpen(false)}>{l}</a>
-        ))}
+        {navLinks.map(l => {
+          const href = l === 'Home' ? '/' : l === 'Menu' ? '/menu' : `/#${l.toLowerCase().replace(' ', '')}`;
+          return (
+            <a key={l} href={href} onClick={() => setMobileMenuOpen(false)}>{l}</a>
+          );
+        })}
         <button className="mp-nav-cta" style={{ width: '100%' }}>Order Online</button>
       </div>
 
@@ -333,11 +339,6 @@ const MenuPage = () => {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </button>
                   </div>
-
-                  {/* Image (if exists) */}
-                  {item.img && (
-                    <div className="mp-card-img" style={{ backgroundImage: `url(${item.img})` }} />
-                  )}
 
                   {/* Name + line */}
                   <div className="mp-card-name-row">

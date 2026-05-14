@@ -204,17 +204,6 @@
 }
 .mp-card-heart:hover { border-color: var(--mp-gold); color: var(--mp-gold); }
 
-/* Card image */
-.mp-card-img {
-  width: 100%;
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  border: 1px solid var(--mp-border);
-}
-
 /* Card name row with line */
 .mp-card-name-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
 .mp-card-name {

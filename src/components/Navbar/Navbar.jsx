@@ -9,14 +9,14 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: "#", label: "Home", active: true },
-    { href: "#about", label: "About Us" },
+    { href: "/", label: "Home", active: true },
+    { href: "/#about", label: "About Us" },
     { href: "/menu", label: "Menu" },
-    { href: "#events", label: "Events" },
-    { href: "#services", label: "Services" },
-    { href: "#gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact Us" },
-    { href: "#order", label: "Order Online" },
+    { href: "/#events", label: "Events" },
+    { href: "/#services", label: "Services" },
+    { href: "/#gallery", label: "Gallery" },
+    { href: "/#contact", label: "Contact Us" },
+    { href: "/#order", label: "Order Online" },
   ];
 
   return (
