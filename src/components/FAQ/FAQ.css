@@ -2,22 +2,31 @@
 .faq {
   padding: 96px 79px 0;
 }
-.faq h2 { margin-bottom: 12px; }
+
+.faq h2 {
+  margin-bottom: 12px;
+}
+
 .faq-list {
   margin-top: 48px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .faq-item {
   width: 100%;
   border-radius: 8px;
   background: var(--card-3);
   padding: 0;
   overflow: hidden;
-  transition: background .25s;
+  transition: background 0.25s;
 }
-.faq-item.open { background: var(--card); }
+
+.faq-item.open {
+  background: var(--card);
+}
+
 .faq-q {
   display: flex;
   align-items: center;
@@ -26,6 +35,7 @@
   cursor: pointer;
   user-select: none;
 }
+
 .faq-q .qtext {
   font-family: var(--serif);
   font-size: 28px;
@@ -35,6 +45,7 @@
   text-align: center;
   padding-right: 36px;
 }
+
 .faq-q .chev {
   width: 24px;
   height: 24px;
@@ -42,24 +53,66 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
-.faq-q .chev svg { width: 14px; height: 8px; stroke: #fff; stroke-width: 2; fill: none; }
-.faq-item.open .chev { transform: rotate(180deg); }
+
+.faq-q .chev svg {
+  width: 14px;
+  height: 8px;
+  stroke: #fff;
+  stroke-width: 2;
+  fill: none;
+}
+
+.faq-item.open .chev {
+  transform: rotate(180deg);
+}
+
 .faq-a {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .35s ease;
+  transition: grid-template-rows 0.35s ease;
 }
-.faq-item.open .faq-a { grid-template-rows: 1fr; }
+
+.faq-item.open .faq-a {
+  grid-template-rows: 1fr;
+}
+
 .faq-a > div {
   overflow: hidden;
 }
+
 .faq-a p {
   padding: 0 24px 32px;
   font-family: var(--sans);
   font-size: 24px;
   line-height: 1.4;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
+}
+
+/* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 992px) {
+  .faq {
+    padding: 60px 40px 0;
+  }
+  .faq-q .qtext {
+    font-size: 22px;
+    padding-right: 20px;
+  }
+  .faq-a p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 60px 20px 0;
+  }
+  .faq-q .qtext {
+    font-size: 18px;
+  }
+  .faq-a p {
+    font-size: 16px;
+  }
 }

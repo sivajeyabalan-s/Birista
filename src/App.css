@@ -1,12 +1,14 @@
-/* ── Scale-to-viewport wrapper ── */
 .site {
-  width: 1440px;
+  width: 100%;
+  max-width: 100vw;
   margin: 0 auto;
   position: relative;
   background: var(--bg);
+  overflow-x: hidden;
 }
 
-/* ──────────── responsive scale ──────────── */
-@media (max-width: 1480px) {
-  .site { transform-origin: top center; }
+/* Ensure body doesn't scroll horizontally */
+body {
+  overflow-x: hidden;
+  width: 100%;
 }

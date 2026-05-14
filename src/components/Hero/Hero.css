@@ -1,10 +1,18 @@
 /* ──────────────── HERO ──────────────── */
 .hero {
   position: relative;
-  height: 935px;
+  height: 100vh;
+  min-height: 800px;
   background: url(/assets/hero-bg.png) center / cover no-repeat;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
+
 .hero::after {
   /* subtle vignette */
   content: '';
@@ -13,47 +21,40 @@
   background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,.4) 100%);
   pointer-events: none;
 }
+
 .hero-title {
-  position: absolute;
-  left: 50%;
-  top: 180px;
-  transform: translateX(-50%);
   font-family: var(--serif-display);
   font-weight: 700;
   font-size: 64px;
-  line-height: 1.08;
-  text-align: center;
+  line-height: 1.1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fff;
-  white-space: nowrap;
   font-variant: small-caps;
   z-index: 2;
+  margin-top: -100px; /* Adjust based on navbar height */
 }
+
 .hero-desc {
-  position: absolute;
-  left: 50%;
-  top: 358px;
-  transform: translateX(-50%);
-  width: 908px;
-  text-align: center;
+  max-width: 908px;
+  width: 100%;
   font-family: var(--sans);
   font-size: 24px;
   line-height: 1.45;
   color: #fff;
   z-index: 2;
+  margin-top: 24px;
 }
+
 .hero-cta {
-  position: absolute;
-  left: 50%;
-  top: 789px;
-  transform: translateX(-50%);
   width: 205px;
   height: 57px;
   z-index: 4;
+  margin-top: auto;
+  margin-bottom: 40px;
 }
 
-/* Glass tag pills floating around the steaming pot */
+/* Glass tag pills */
 .tag {
   position: absolute;
   width: 358px;
@@ -63,29 +64,29 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255,255,255,0.18);
-  box-shadow:
-    -1px 3px 6px 0 rgba(0,0,0,0.08),
-    -3px 11px 11px 0 rgba(0,0,0,0.07),
-    -7px 24px 15px 0 rgba(0,0,0,0.04);
+  box-shadow: -1px 3px 6px 0 rgba(0,0,0,0.08), -3px 11px 11px 0 rgba(0,0,0,0.07), -7px 24px 15px 0 rgba(0,0,0,0.04);
   z-index: 3;
   display: flex;
   align-items: center;
   padding: 0 24px;
 }
+
 .tag .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 12px rgba(4,159,43,0.65);
+  box-shadow: 0 0 12px rgba(4, 159, 43, 0.65);
   margin-right: 12px;
 }
+
 .tag .label {
   font-family: var(--serif);
   font-size: 20px;
   color: #fff;
+  text-align: left;
 }
-/* Tail (Polygon 2) sticking out the bottom of the tag */
+
 .tag::after {
   content: '';
   position: absolute;
@@ -93,30 +94,92 @@
   height: 0;
   border: 12px solid transparent;
 }
+
 .tag.right {
-  left: 821px;
-  top: 626px;
+  left: 60%;
+  top: 65%;
 }
+
 .tag.right::after {
   bottom: -18px;
   left: 6px;
-  border-top: 18px solid rgba(255,255,255,0.08);
+  border-top: 18px solid rgba(255, 255, 255, 0.08);
   border-left: 0;
   border-right: 0;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,.25));
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
 }
+
 .tag.left {
-  left: 312px;
-  top: 513px;
+  right: 60%;
+  top: 55%;
   transform: scaleX(-1);
 }
+
 .tag.left .inner-flip {
   transform: scaleX(-1);
   display: flex;
   align-items: center;
 }
+
 .tag.left::after {
   bottom: -18px;
   left: 6px;
-  border-top: 18px solid rgba(255,255,255,0.08);
+  border-top: 18px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 52px;
+  }
+  .tag.right {
+    left: 55%;
+  }
+  .tag.left {
+    right: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 140px 20px 80px;
+  }
+  .hero-title {
+    font-size: 44px;
+    margin-top: 0;
+    white-space: normal;
+  }
+  .hero-desc {
+    font-size: 20px;
+  }
+  .tag {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 358px;
+  }
+  .tag.left .inner-flip {
+    transform: none;
+  }
+  .tag::after {
+    display: none;
+  }
+  .hero-cta {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-desc {
+    font-size: 18px;
+  }
 }

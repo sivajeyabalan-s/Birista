@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
@@ -10,33 +11,9 @@ import Gallery from './components/Gallery/Gallery';
 import FAQ from './components/FAQ/FAQ';
 import Map from './components/Map/Map';
 import Footer from './components/Footer/Footer';
+import MenuPage from './components/MenuPage/MenuPage';
 
-function App() {
-  useEffect(() => {
-    function scaleSite() {
-      const site = document.querySelector('.site');
-      if (!site) return;
-      const vw = window.innerWidth;
-      if (vw < 1440) {
-        const s = vw / 1440;
-        site.style.transform = `scale(${s})`;
-        site.style.transformOrigin = 'top left';
-        site.style.width = '1440px';
-        document.body.style.height = (site.offsetHeight * s) + 'px';
-        document.body.style.overflowX = 'hidden';
-      } else {
-        site.style.transform = '';
-        site.style.width = '1440px';
-        document.body.style.height = '';
-      }
-    }
-    
-    scaleSite();
-    window.addEventListener('resize', scaleSite);
-    
-    return () => window.removeEventListener('resize', scaleSite);
-  }, []);
-
+function HomePage() {
   return (
     <div className="site" data-screen-label="Birista House Home">
       <Navbar />
@@ -50,6 +27,17 @@ function App() {
       <Map />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/menu" element={<MenuPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

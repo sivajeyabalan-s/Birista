@@ -22,17 +22,17 @@ const Menu = () => {
       <div className="menu-grid">
         {/* Featured card */}
         <div className="menu-featured">
-          <div className="img">
+          <div className="img" style={{ backgroundImage: 'url("/assets/menu/chicken pulav.jpg")' }}>
             <div className="circle-icon heart">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /></svg>
             </div>
           </div>
           <div className="meta">
             <div className="row">
-              <h3>Chicken Biryani</h3>
-              <span className="price">$25.99</span>
+              <h3>Chicken Pulav</h3>
+              <span className="price">$15.49</span>
             </div>
-            <p>Fragrant basmati rice with tender chicken aromatic spices, slow-cooked for rich flavor.</p>
+            <p>Golden fried chicken pieces served alongside fragrant, well-spiced pulav rice.</p>
           </div>
           <div className="pills">
             <span className="menu-pill">Medium Spice</span>
@@ -45,55 +45,55 @@ const Menu = () => {
         {/* Side cards */}
         <div className="menu-list">
           <div className="menu-card card-1">
-            <div className="img">
+            <div className="img" style={{ backgroundImage: 'url("/assets/menu/chilli paneer.jpg")' }}>
               <div className="circle-icon heart">
                 <svg viewBox="0 0 24 24" style={{ width: '12px', height: '12px' }}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
             </div>
             <div className="meta">
               <div className="row">
-                <h4>Chili Panner</h4>
-                <span className="price">$10.99</span>
+                <h4>Chilli Paneer</h4>
+                <span className="price">$12.99</span>
               </div>
-              <p>Crispy paneer cubes tossed with onions, capsicum, and green chilies ... <span style={{ color: '#fff' }}>More</span></p>
+              <p>Soft paneer cubes tossed in spicy Indo-Chinese chilli and pepper sauce ... <span style={{ color: '#fff' }}>More</span></p>
             </div>
 
           </div>
 
           <div className="menu-card card-2">
-            <div className="img">
+            <div className="img" style={{ backgroundImage: 'url("/assets/menu/chicken pepper fry.jpg")' }}>
               <div className="circle-icon heart">
                 <svg viewBox="0 0 24 24" style={{ width: '12px', height: '12px' }}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
             </div>
             <div className="meta">
               <div className="row">
-                <h4>Dal Tadka</h4>
-                <span className="price">$8.49</span>
+                <h4>Chicken Pepper Fry</h4>
+                <span className="price">$14.99</span>
               </div>
-              <p>Yellow lentils tempered with garlic, cumin, and aromatic Indian spices ... <span style={{ color: '#fff' }}>More</span></p>
+              <p>Juicy chicken stir-fried with coarsely crushed black pepper and spices ... <span style={{ color: '#fff' }}>More</span></p>
             </div>
 
           </div>
 
           <div className="menu-card card-3">
-            <div className="img">
+            <div className="img" style={{ backgroundImage: 'url("/assets/menu/thai milk tea.jpg")' }}>
               <div className="circle-icon heart">
                 <svg viewBox="0 0 24 24" style={{ width: '12px', height: '12px' }}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
             </div>
             <div className="meta">
               <div className="row">
-                <h4>Hot and Sour Soup</h4>
-                <span className="price">$3.99</span>
+                <h4>Thai Milk Tea</h4>
+                <span className="price">$5.99</span>
               </div>
-              <p>A spicy and tangy vegetable soup with bold flavors and aromatic ... <span style={{ color: '#fff' }}>More</span></p>
+              <p>Sweet, spiced Thai-style orange milk tea with silky boba pearls ... <span style={{ color: '#fff' }}>More</span></p>
             </div>
 
           </div>
 
           <div className="menu-card card-4">
-            <div className="img">
+            <div className="img" style={{ backgroundImage: 'url("/assets/menu/buttern naan.jpg")' }}>
               <div className="circle-icon heart">
                 <svg viewBox="0 0 24 24" style={{ width: '12px', height: '12px' }}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
@@ -101,9 +101,9 @@ const Menu = () => {
             <div className="meta">
               <div className="row">
                 <h4>Butter Naan</h4>
-                <span className="price">$5.49</span>
+                <span className="price">₹50</span>
               </div>
-              <p>Soft and fluffy Indian flatbread brushed with melted butter, freshly ... <span style={{ color: '#fff' }}>More</span></p>
+              <p>Classic tandoor naan finished with a generous slather of fresh butter ... <span style={{ color: '#fff' }}>More</span></p>
             </div>
 
           </div>

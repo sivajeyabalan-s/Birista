@@ -2,13 +2,22 @@
 .specials {
   padding: 96px 40px 0;
 }
+
 .specials-grid {
   display: grid;
-  grid-template-columns: 300px 300px 390px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   align-items: center;
   margin-top: 56px;
 }
+
+/* Adjusting specifically for the 4-item layout seen in original */
+@media (min-width: 1200px) {
+  .specials-grid {
+    grid-template-columns: 1fr 1fr 1.3fr 1fr;
+  }
+}
+
 .special {
   height: 420px;
   border-radius: 8px;
@@ -16,33 +25,63 @@
   background-position: center;
   position: relative;
   overflow: hidden;
-  box-shadow:
-    -2px 4px 10px 0 rgba(145,145,145,0.05),
-    -7px 17px 18px 0 rgba(145,145,145,0.04),
-    -15px 37px 24px 0 rgba(145,145,145,0.03);
+  box-shadow: -2px 4px 10px 0 rgba(145, 145, 145, 0.05), -7px 17px 18px 0 rgba(145, 145, 145, 0.04), -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
 }
-.special.s1 { background-image: url(/assets/special-1.jpg); }
-.special.s2 { background-image: url(/assets/special-2.jpg); }
+
+.special.s1 {
+  background-image: url(/assets/special-1.jpg);
+}
+.special.s2 {
+  background-image: url(/assets/special-2.jpg);
+}
 .special.s3 {
   height: 450px;
   background-image: url(/assets/special-3.jpg);
   border: 1px solid var(--gold);
   position: relative;
 }
+
 .special.s3::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
+
 .special.s3 .play {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 2;
 }
+
 .special.s3 .play svg {
   fill: #fff;
   stroke: none;
 }
-.special.s4 { background-image: url(/assets/special-4.jpg); }
+
+.special.s4 {
+  background-image: url(/assets/special-4.jpg);
+}
+
+/* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 1200px) {
+  .specials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .special.s3 {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .specials {
+    padding: 60px 20px 0;
+  }
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+  .special {
+    height: 350px;
+  }
+}
