@@ -56,9 +56,9 @@
   background-size: cover;
   background-position: center;
 }
-.about-photos .photo:nth-child(1) { background-image: url(/assets/about-1.jpg); }
-.about-photos .photo:nth-child(2) { background-image: url(/assets/special-4.jpg); background-position: center; }
-.about-photos .photo:nth-child(3) { background-image: url(/assets/special-1.jpg); }
+.about-photos .photo:nth-child(1) { background-image: url(/assets/aboutUs/aboutus1.jpg); }
+.about-photos .photo:nth-child(2) { background-image: url(/assets/aboutUs/aboutus2.jpg); }
+.about-photos .photo:nth-child(3) { background-image: url(/assets/aboutUs/aboutus3.jpg); }
 
 .about-text {
   padding-left: 36px;

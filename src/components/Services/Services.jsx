@@ -10,19 +10,19 @@ const Services = () => {
       </div>
       <div className="services-grid">
         <div className="service-card">
-          <div className="icon"></div>
+          <div className="icon s1"></div>
           <div className="label">Authentic Flavors</div>
         </div>
         <div className="service-card">
-          <div className="icon"></div>
+          <div className="icon s2"></div>
           <div className="label">Signature Dishes</div>
         </div>
         <div className="service-card">
-          <div className="icon"></div>
+          <div className="icon s3"></div>
           <div className="label">Service with a Smile</div>
         </div>
         <div className="service-card">
-          <div className="icon"></div>
+          <div className="icon s4"></div>
           <div className="label">Passion on Every Plate</div>
         </div>
       </div>

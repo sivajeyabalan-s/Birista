@@ -27,8 +27,14 @@
 .service-card .icon {
   width: 80px;
   height: 80px;
-  background: url(/assets/service-icon.png) center / contain no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+.service-card .icon.s1 { background-image: url(/assets/services/serviceOne.png); }
+.service-card .icon.s2 { background-image: url(/assets/services/serviceTwo.png); }
+.service-card .icon.s3 { background-image: url(/assets/services/serviceThree.png); }
+.service-card .icon.s4 { background-image: url(/assets/services/serviceFour.png); }
 .service-card .label {
   font-family: var(--sans);
   font-size: 24px;
