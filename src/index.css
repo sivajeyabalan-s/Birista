@@ -57,13 +57,9 @@ body {
     url(/assets/btn-texture.png) center / 200% no-repeat,
     linear-gradient(rgb(100,39,22), rgb(100,39,22));
   background-blend-mode: overlay;
-  box-shadow:
-    0 42px 107px 0 rgba(100,39,22,0.35),
-    inset 0 1px 4px 2px rgba(255,237,219,0.95),
-    inset 0 1px 18px 2px rgba(255,237,219,0.6);
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease;
 }
-.brown-btn:hover { transform: translateY(-1px); box-shadow: 0 50px 120px 0 rgba(100,39,22,0.5), inset 0 1px 4px 2px rgba(255,237,219,0.95), inset 0 1px 18px 2px rgba(255,237,219,0.7); }
+.brown-btn:hover { transform: translateY(-1px); }
 
 .glass {
   background: rgba(255,255,255,0.06);
