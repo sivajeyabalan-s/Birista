@@ -47,6 +47,7 @@
 .about-photos {
   display: flex;
   gap: 13px;
+  align-items: center;
 }
 .about-photos .photo {
   width: 188px;
@@ -57,7 +58,11 @@
   background-position: center;
 }
 .about-photos .photo:nth-child(1) { background-image: url(/assets/aboutUs/aboutus1.jpg); }
-.about-photos .photo:nth-child(2) { background-image: url(/assets/aboutUs/aboutus2.jpg); }
+.about-photos .photo:nth-child(2) { 
+  background-image: url(/assets/aboutUs/aboutus2.jpg);
+  width: 218px;
+  height: 412px;
+}
 .about-photos .photo:nth-child(3) { background-image: url(/assets/aboutUs/aboutus3.jpg); }
 
 .about-text {
