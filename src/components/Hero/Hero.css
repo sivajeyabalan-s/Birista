@@ -7,6 +7,13 @@
   animation: kenBurns 22s ease-in-out infinite;
 }
 
+.hero-bg-anim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
 .brand-clip {
   overflow: hidden;
   display: block;

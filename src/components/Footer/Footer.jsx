@@ -57,9 +57,9 @@ const Footer = () => {
           <h4>Get In Touch</h4>
           <a className="brown-btn" href="#">Order Online</a>
           <div className="address">
-            321 W Hickory St Ste 100, Denton, TX 76201<br />
-            +1 (940) 243-2257<br />
-            info@biristahouse.com
+            123 Dummy Street, Suite 100, City, ST 00000<br />
+            +1 (000) 000-0000<br />
+            info@example.com
           </div>
         </motion.div>
       </div>

@@ -42,13 +42,13 @@
   background-image: url(/assets/services/serviceOne.png);
 }
 .service-card .icon.s2 {
-  background-image: url(/assets/services/serviceTwo.png);
+  background-image: url(/assets/services/servieTwo.png);
 }
 .service-card .icon.s3 {
   background-image: url(/assets/services/serviceThree.png);
 }
 .service-card .icon.s4 {
-  background-image: url(/assets/services/serviceFour.png);
+  background-image: url(/assets/services/servieFour.png);
 }
 
 .service-card .label {

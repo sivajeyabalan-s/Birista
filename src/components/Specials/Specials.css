@@ -1,4 +1,4 @@
-/* ──────────────── SPECIALS ──────────────── */
+/* SPECIALS */
 .specials {
   padding: 96px 40px 0;
 }
@@ -23,7 +23,6 @@
     -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
 }
 
-/* Placeholder label */
 .special::after {
   content: "Coming Soon";
   position: absolute;
@@ -38,109 +37,13 @@
   text-transform: uppercase;
   color: var(--gold);
   z-index: 1;
-  animation: special-blink 1.2s steps(2, start) infinite;
 }
 
-@keyframes special-blink {
-  0%,
-  55% {
-    opacity: 1;
-  }
-  56%,
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Default: first card shows hover state */
-.special.s1 {
-  height: 450px;
-  border: 1px solid var(--gold);
-}
-
-.special.s1::before {
-  opacity: 1;
-}
-
-.special.s1 .play {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* When hovering any card, revert the first card unless it is hovered */
-.specials-grid:hover .special.s1:not(:hover) {
-  height: 420px;
-  border: none;
-}
-
-.specials-grid:hover .special.s1:not(:hover)::before {
-  opacity: 0;
-}
-
-.specials-grid:hover .special.s1:not(:hover) .play {
-  opacity: 0;
-}
-
-/* play button hidden by default (opacity only — display:none breaks animations) */
 .special .play {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  border: none;
-  cursor: pointer;
+  display: none;
 }
 
-/* s1 play button always visible with continuous glow */
-.special.s1 .play {
-  animation: playPulse 2s ease-in-out infinite;
-}
-
-/* Hovered card play button pulses faster */
-.special:hover .play {
-  animation: playPulse 1.5s ease-in-out infinite;
-}
-
-.special .play svg {
-  fill: #fff;
-  stroke: none;
-}
-
-/* overlay hidden by default */
-.special::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--green);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* hover: grow card, show overlay + play button */
-.special:hover {
-  height: 450px;
-  border: 1px solid var(--gold);
-  transition:
-    height 0.3s,
-    border 0.3s;
-}
-
-.special:hover::before {
-  opacity: 1;
-}
-
-.special:hover .play {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* ──────────────── RESPONSIVE ──────────────── */
+/* RESPONSIVE */
 @media (max-width: 1200px) {
   .specials-grid {
     grid-template-columns: repeat(2, 1fr);
