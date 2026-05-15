@@ -56,10 +56,6 @@
     transform 0.2s;
 }
 
-.footer .socials a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
 .footer .socials svg {
   width: 18px;
   height: 18px;
@@ -97,12 +93,6 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer ul li a:hover {
-  color: var(--gold-2);
-}
-.footer ul li a:hover svg {
-  stroke: var(--gold-2);
-}
 .footer ul li svg {
   width: 12px;
   height: 12px;
@@ -125,6 +115,10 @@
   padding: 16px 32px;
   justify-content: flex-start;
   margin-bottom: 24px;
+}
+
+.footer .col-contact .brown-btn:hover {
+  transform: none;
 }
 
 .footer .address {

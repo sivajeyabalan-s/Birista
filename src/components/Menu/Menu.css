@@ -133,24 +133,6 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-.menu-featured .pills {
-  display: flex;
-  gap: 8px;
-  padding: 0 24px;
-  margin-top: 10px;
-}
-
-.menu-pill {
-  padding: 8px 16px;
-  border-radius: 24px;
-  background: rgba(240, 240, 240, 0.18);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  font-family: var(--sans);
-  font-size: 14px;
-  color: #fff;
-}
-
 .menu-featured .add-btn {
   position: absolute;
   bottom: 16px;
@@ -309,9 +291,6 @@
   .menu-head {
     align-items: flex-start;
   }
-  .menu-pill {
-    display: none;
-  }
 }
 
 @media (max-width: 600px) {
@@ -332,8 +311,5 @@
   }
   .menu-featured p {
     font-size: 14px;
-  }
-  .menu-featured .pills {
-    flex-wrap: wrap;
   }
 }

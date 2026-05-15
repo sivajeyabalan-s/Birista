@@ -29,11 +29,6 @@ const Menu = () => {
               pulav rice.
             </p>
           </div>
-          <div className="pills">
-            <span className="menu-pill">Medium Spice</span>
-            <span className="menu-pill">Fresh</span>
-            <span className="menu-pill">Hot to Serve</span>
-          </div>
         </div>
 
         {/* Side cards */}

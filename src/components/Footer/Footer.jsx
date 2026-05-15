@@ -90,11 +90,11 @@ const Footer = () => {
             Order Online
           </a>
           <div className="address">
-            321 W Hickory St Ste 100, Denton, TX 76201
+            123 Demo Street, Sample City, TX 75001
             <br />
-            +1 (940) 243-2257
+            +1 (555) 123-4567
             <br />
-            info@biristahouse.com
+            hello@example.com
           </div>
         </div>
       </div>
