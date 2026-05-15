@@ -52,11 +52,6 @@ const Menu = () => {
             </div>
             <p>Golden fried chicken pieces served alongside fragrant, well-spiced pulav rice.</p>
           </div>
-          <div className="pills">
-            <span className="menu-pill">Medium Spice</span>
-            <span className="menu-pill">Fresh</span>
-            <span className="menu-pill">Hot to Serve</span>
-          </div>
         </motion.div>
 
         <div className="menu-list">
