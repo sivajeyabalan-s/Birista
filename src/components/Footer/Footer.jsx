@@ -57,7 +57,7 @@ const Footer = () => {
           <h4>Get In Touch</h4>
           <a className="brown-btn" href="#">Order Online</a>
           <div className="address">
-            123 Dummy Street, Suite 100, City, ST 00000<br />
+            6377 Custer Rd, Frisco, TX 75035.<br />
             +1 (000) 000-0000<br />
             info@example.com
           </div>
