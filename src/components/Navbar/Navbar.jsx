@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -53,7 +54,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav">
+    <motion.nav
+      className="nav"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+    >
       <a href="/" className="logo" aria-label="Birista House" />
 
       {/* Desktop pill */}
@@ -95,7 +101,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && <div className="nav-backdrop" onClick={() => setIsOpen(false)} />}
-    </nav>
+    </motion.nav>
   );
 };
 

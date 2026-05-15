@@ -1,9 +1,21 @@
 /* ──────────────── HERO ──────────────── */
+.hero-bg-anim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url(/assets/hero-bg.png) center / cover no-repeat;
+  animation: kenBurns 22s ease-in-out infinite;
+}
+
+.brand-clip {
+  overflow: hidden;
+  display: block;
+}
+
 .hero {
   position: relative;
   height: 100vh;
   min-height: 800px;
-  background: url(/assets/hero-bg.png) center / cover no-repeat;
   overflow: hidden;
   display: flex;
   flex-direction: column;

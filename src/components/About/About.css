@@ -91,11 +91,7 @@
   background-image: url(/assets/aboutUs/aboutus3.jpg);
 }
 
-.about-text {
-  display: contents;
-}
-
-.about-text h3 {
+.about-row > h3 {
   grid-area: heading;
   padding-top: 12px;
   font-family: var(--serif);
@@ -107,7 +103,7 @@
   text-align: left;
 }
 
-.about-text p {
+.about-row > p {
   grid-area: copy;
   padding-left: 36px;
   font-family: var(--sans);
@@ -136,13 +132,8 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .about-text {
-    display: block;
-    padding-left: 0;
-    text-align: center;
-  }
-  .about-text h3,
-  .about-text p {
+  .about-row > h3,
+  .about-row > p {
     padding-left: 0;
     text-align: center;
   }
@@ -178,9 +169,6 @@
   .about-stats {
     margin-top: 0;
     order: 3;
-  }
-  .about-text {
-    order: 2;
   }
 }
 

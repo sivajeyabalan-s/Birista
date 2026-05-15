@@ -68,6 +68,7 @@
 
 .special.s1 .play {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* When hovering any card, revert the first card unless it is hovered */
@@ -84,17 +85,30 @@
   opacity: 0;
 }
 
-/* play button hidden by default */
+/* play button hidden by default (opacity only — display:none breaks animations) */
 .special .play {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 2;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s;
   border: none;
   cursor: pointer;
+}
+
+/* s1 play button always visible with continuous glow */
+.special.s1 .play {
+  animation: playPulse 2s ease-in-out infinite;
+}
+
+/* Hovered card play button pulses faster */
+.special:hover .play {
+  animation: playPulse 1.5s ease-in-out infinite;
 }
 
 .special .play svg {
@@ -127,6 +141,7 @@
 
 .special:hover .play {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ──────────────── RESPONSIVE ──────────────── */
