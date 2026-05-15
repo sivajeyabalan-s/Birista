@@ -3,19 +3,26 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: rgb(0,0,0);
-  --card: rgb(30,30,30);
-  --card-2: rgb(34,34,34);
-  --card-3: rgb(57,57,57);
-  --brown: rgb(100,39,22);
-  --brown-light: rgb(208,129,107);
-  --cream: rgb(255,237,219);
-  --gold: rgb(197,150,27);
-  --gold-2: rgb(199,185,105);
-  --text-muted: rgb(187,187,187);
-  --text-muted-2: rgb(198,198,198);
-  --divider: rgb(58,57,64);
-  --green: rgb(4,159,43);
+  --bg: rgb(10,4,2);
+  --card: rgb(28,12,8);
+  --card-2: rgb(35,15,9);
+  --card-3: rgb(60,26,14);
+  --brown: rgb(107,42,24);
+  --brown-light: rgb(215,108,26);
+  --cream: rgb(255,237,213);
+  --gold: rgb(245,166,35);
+  --gold-2: rgb(215,108,26);
+  --text-muted: rgb(196,165,148);
+  --text-muted-2: rgb(210,182,166);
+  --divider: rgb(65,28,16);
+  --green: rgb(136,183,147);
+
+  /* Brand palette aliases */
+  --maroon: #6b2a18;
+  --saffron: #f5a623;
+  --caramel: #d76c1a;
+  --mint: #88b793;
+  --ivory: #ffedd5;
 
   --serif-display: 'Cormorant Garamond', 'Trajan Pro 3', 'Marcellus', serif;
   --serif: 'Marcellus', serif;
@@ -59,7 +66,7 @@ body {
   border: none;
   background:
     url(/assets/btn-texture.png) center / 200% no-repeat,
-    linear-gradient(rgb(100,39,22), rgb(100,39,22));
+    linear-gradient(var(--maroon), var(--maroon));
   background-blend-mode: overlay;
   transition: transform .25s ease;
 }

@@ -68,7 +68,7 @@
   margin-top: auto;
   margin-bottom: 60px;
   border-radius: 50px;
-  background: linear-gradient(180deg, #8b4513 0%, #5d2e0c 100%);
+  background: linear-gradient(180deg, var(--caramel) 0%, var(--maroon) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   font-family: var(--serif);
@@ -79,7 +79,7 @@
 
 .hero-cta:hover {
   transform: translateY(-2px);
-  background: linear-gradient(180deg, #a0522d 0%, #6b3e26 100%);
+  background: linear-gradient(180deg, var(--saffron) 0%, var(--caramel) 100%);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 

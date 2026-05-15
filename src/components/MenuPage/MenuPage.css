@@ -243,8 +243,8 @@
 }
 
 .mp-seg-btn.on {
-  background: #fff;
-  color: #000;
+  background: var(--ivory);
+  color: var(--maroon);
   padding: 0 22px;
 }
 
@@ -315,22 +315,22 @@
   justify-content: center;
   padding: 10px;
   border-radius: 24px 0 40px 24px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background: rgba(10, 4, 2, 0.7);
+  color: var(--ivory);
   font-family: "Marcellus", var(--serif);
   font-size: 12px;
 }
 
 .mp-cat.on {
-  background: #fff;
-  color: #000;
+  background: var(--ivory);
+  color: var(--maroon);
   border-radius: 24px 0 40px 24px;
 }
 
 .mp-cat.on .mp-cat-count {
   padding: 10px 15px;
-  background: #000;
-  color: #fff;
+  background: var(--maroon);
+  color: var(--ivory);
 }
 
 .mp-cat-arrow {
@@ -376,8 +376,8 @@
   margin: 0;
   font-family: "Marcellus", var(--serif);
   font-size: clamp(30px, 4vw, 48px);
-  line-height: 1;
-  background: linear-gradient(180deg, #e6d77f, #a07d10);
+  
+  background: linear-gradient(180deg, var(--saffron), var(--caramel));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -412,16 +412,16 @@
   border-radius: 4px;
   border-image-source: conic-gradient(
     from 102.21deg at 52.75% 38.75%,
-    rgba(249, 249, 249, 0.5) -32.95deg,
-    rgba(64, 64, 64, 0.5) 10.52deg,
-    rgba(64, 64, 64, 0.35) 32.12deg,
-    rgba(255, 255, 255, 0.5) 60.28deg,
-    rgba(255, 255, 255, 0.5) 107.79deg,
-    rgba(64, 64, 64, 0.35) 187.59deg,
-    #f9f9f9 207.58deg,
-    rgba(255, 255, 255, 0.5) 287.31deg,
-    rgba(249, 249, 249, 0.5) 327.05deg,
-    rgba(64, 64, 64, 0.5) 370.52deg
+    rgba(245, 166, 35, 0.5) -32.95deg,
+    rgba(107, 42, 24, 0.5) 10.52deg,
+    rgba(107, 42, 24, 0.35) 32.12deg,
+    rgba(245, 166, 35, 0.5) 60.28deg,
+    rgba(215, 108, 26, 0.5) 107.79deg,
+    rgba(107, 42, 24, 0.35) 187.59deg,
+    rgba(245, 166, 35, 0.6) 207.58deg,
+    rgba(215, 108, 26, 0.5) 287.31deg,
+    rgba(245, 166, 35, 0.5) 327.05deg,
+    rgba(107, 42, 24, 0.5) 370.52deg
   );
   border-image-slice: 1;
   box-shadow:
@@ -440,10 +440,10 @@
 
 .mp-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(199, 185, 105, 0.45);
+  border-color: rgba(245, 166, 35, 0.45);
   box-shadow:
     0 14px 32px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(199, 185, 105, 0.25);
+    inset 0 0 0 1px rgba(245, 166, 35, 0.25);
 }
 
 @keyframes mp-rise {
@@ -484,21 +484,21 @@
 }
 
 .mp-tag.spice-low {
-  background: rgba(34, 197, 94, 0.12);
-  color: #4ade80;
-  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(136, 183, 147, 0.15);
+  color: var(--mint);
+  border-color: rgba(136, 183, 147, 0.35);
 }
 
 .mp-tag.spice-mid {
-  background: rgba(234, 179, 8, 0.12);
-  color: #facc15;
-  border-color: rgba(234, 179, 8, 0.3);
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--saffron);
+  border-color: rgba(245, 166, 35, 0.35);
 }
 
 .mp-tag.spice-high {
-  background: rgba(239, 68, 68, 0.12);
-  color: #f87171;
-  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(215, 108, 26, 0.12);
+  color: var(--caramel);
+  border-color: rgba(215, 108, 26, 0.35);
 }
 
 .mp-tag-dot {
@@ -650,7 +650,7 @@
   font-family: "Gentium Book Plus", Georgia, serif;
   font-weight: 700;
   font-size: 18px;
-  background: linear-gradient(180deg, #e6d77f, #a07d10);
+  background: linear-gradient(180deg, var(--saffron), var(--caramel));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
