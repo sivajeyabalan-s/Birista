@@ -133,6 +133,11 @@
     width: 100%;
     overflow-x: auto;
     padding-bottom: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .about-photos::-webkit-scrollbar {
+    display: none;
   }
   .about-photos .photo {
     flex-shrink: 0;
@@ -149,7 +154,7 @@
 @media (max-width: 480px) {
   .about-photos {
     gap: 8px;
-    overflow-x: hidden;
+    overflow-x: auto;
     flex-wrap: nowrap;
     max-width: 100%;
   }

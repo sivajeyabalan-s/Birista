@@ -4,7 +4,10 @@ import './Hero.css';
 const Hero = () => {
   return (
     <header className="hero">
-      <h1 className="hero-title">Welcome to Birista House</h1>
+      <h1 className="hero-title">
+        <span className="welcome">WELCOME TO</span>
+        <span className="brand">BIRISTA HOUSE</span>
+      </h1>
       <p className="hero-desc">
         Experience the authentic taste of tradition with our rich, aromatic
         biryanis, sizzling kebabs, and handcrafted delicacies. Made with passion,

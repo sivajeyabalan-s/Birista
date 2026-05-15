@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Select-String \"menu\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\sivajb\\\\Documents\\\\GitHub\\\\BiristaNew\" -Name)"
+    ]
+  }
+}
