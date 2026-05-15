@@ -1,10 +1,10 @@
-import React from 'react';
-import './Gallery.css';
+import React from "react";
+import "./Gallery.css";
 
 const Gallery = () => {
   return (
     <section className="gallery" id="gallery">
-      <div className="title-block">
+      <div className="title-block wide">
         <h2 className="section-title">Gallery</h2>
         <span className="ornament"></span>
       </div>

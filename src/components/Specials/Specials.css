@@ -7,70 +7,132 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  align-items: center;
+  align-items: stretch;
   margin-top: 56px;
-}
-
-/* Adjusting specifically for the 4-item layout seen in original */
-@media (min-width: 1200px) {
-  .specials-grid {
-    grid-template-columns: 1fr 1fr 1.3fr 1fr;
-  }
 }
 
 .special {
   height: 420px;
   border-radius: 8px;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
   position: relative;
   overflow: hidden;
-  box-shadow: -2px 4px 10px 0 rgba(145, 145, 145, 0.05), -7px 17px 18px 0 rgba(145, 145, 145, 0.04), -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
+  box-shadow:
+    -2px 4px 10px 0 rgba(145, 145, 145, 0.05),
+    -7px 17px 18px 0 rgba(145, 145, 145, 0.04),
+    -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
 }
 
-.special.s1 {
-  background-image: url(/assets/special-1.jpg);
-}
-.special.s2 {
-  background-image: url(/assets/special-2.jpg);
-}
-.special.s3 {
-  height: 450px;
-  background-image: url(/assets/special-3.jpg);
-  border: 1px solid var(--gold);
-  position: relative;
-}
-
-.special.s3::before {
-  content: '';
+/* Placeholder label */
+.special::after {
+  content: "Coming Soon";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(220, 220, 220, 0.85);
+  z-index: 1;
+  animation: special-blink 1.2s steps(2, start) infinite;
 }
 
-.special.s3 .play {
+@keyframes special-blink {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Default: first card shows hover state */
+.special.s1 {
+  height: 450px;
+  border: 1px solid var(--gold);
+}
+
+.special.s1::before {
+  opacity: 1;
+}
+
+.special.s1 .play {
+  opacity: 1;
+}
+
+/* When hovering any card, revert the first card unless it is hovered */
+.specials-grid:hover .special.s1:not(:hover) {
+  height: 420px;
+  border: none;
+}
+
+.specials-grid:hover .special.s1:not(:hover)::before {
+  opacity: 0;
+}
+
+.specials-grid:hover .special.s1:not(:hover) .play {
+  opacity: 0;
+}
+
+/* play button hidden by default */
+.special .play {
+  display: none;
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
-.special.s3 .play svg {
+.special .play svg {
   fill: #fff;
   stroke: none;
 }
 
-.special.s4 {
-  background-image: url(/assets/special-4.jpg);
+/* overlay hidden by default */
+.special::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* hover: grow card, show overlay + play button */
+.special:hover {
+  height: 450px;
+  border: 1px solid var(--gold);
+  transition:
+    height 0.3s,
+    border 0.3s;
+}
+
+.special:hover::before {
+  opacity: 1;
+}
+
+.special:hover .play {
+  opacity: 1;
 }
 
 /* ──────────────── RESPONSIVE ──────────────── */
 @media (max-width: 1200px) {
   .specials-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .special.s3 {
-    height: 420px;
   }
 }
 

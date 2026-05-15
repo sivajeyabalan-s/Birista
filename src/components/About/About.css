@@ -12,11 +12,16 @@
   margin-top: 60px;
   display: grid;
   grid-template-columns: 354px 614px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "heading photos copy"
+    "stats photos copy";
   gap: 28px;
   align-items: start;
 }
 
 .about-stats {
+  grid-area: stats;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -25,8 +30,12 @@
   border-radius: 24px;
   background: var(--card);
   padding: 16px;
-  margin-top: 287px; /* sits at bottom of column */
-  box-shadow: -2px 4px 10px 0 rgba(145, 145, 145, 0.05), -7px 17px 18px 0 rgba(145, 145, 145, 0.04), -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
+  margin-top: 0;
+  align-self: end;
+  box-shadow:
+    -2px 4px 10px 0 rgba(145, 145, 145, 0.05),
+    -7px 17px 18px 0 rgba(145, 145, 145, 0.04),
+    -15px 37px 24px 0 rgba(145, 145, 145, 0.03);
 }
 
 .about-stat {
@@ -51,9 +60,14 @@
 }
 
 .about-photos {
+  grid-area: photos;
   display: flex;
   gap: 13px;
   align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
 }
 
 .about-photos .photo {
@@ -78,42 +92,58 @@
 }
 
 .about-text {
-  padding-left: 36px;
-  padding-top: 12px;
+  display: contents;
 }
 
 .about-text h3 {
+  grid-area: heading;
+  padding-top: 12px;
   font-family: var(--serif);
   font-size: 36px;
   line-height: 1.15;
   font-weight: 400;
   margin-bottom: 20px;
   color: #fff;
+  text-align: left;
 }
 
 .about-text p {
+  grid-area: copy;
+  padding-left: 36px;
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.85);
+  text-align: left;
 }
 
 /* ──────────────── RESPONSIVE ──────────────── */
 @media (max-width: 1300px) {
   .about-row {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "heading"
+      "photos"
+      "copy"
+      "stats";
+    justify-items: center;
   }
   .about-stats {
     margin-top: 40px;
-    grid-column: 1 / span 2;
     width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
   .about-text {
+    display: block;
     padding-left: 0;
-    grid-column: 1 / span 2;
+    text-align: center;
+  }
+  .about-text h3,
+  .about-text p {
+    padding-left: 0;
     text-align: center;
   }
 }
@@ -131,7 +161,10 @@
   .about-photos {
     justify-content: center;
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    padding-inline: 10px;
+    scroll-padding-inline: 10px;
     padding-bottom: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -153,7 +186,7 @@
 
 @media (max-width: 480px) {
   .about-photos {
-    gap: 8px;
+    gap: 1px;
     overflow-x: auto;
     flex-wrap: nowrap;
     max-width: 100%;

@@ -9,14 +9,26 @@ const Specials = () => {
         <span className="ornament"></span>
       </div>
       <div className="specials-grid">
-        <div className="special s1"></div>
-        <div className="special s2"></div>
+        <div className="special s1">
+          <button className="circle-icon play" aria-label="Play video">
+            <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M8 5v14l11-7z" /></svg>
+          </button>
+        </div>
+        <div className="special s2">
+          <button className="circle-icon play" aria-label="Play video">
+            <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M8 5v14l11-7z" /></svg>
+          </button>
+        </div>
         <div className="special s3">
           <button className="circle-icon play" aria-label="Play video">
             <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M8 5v14l11-7z" /></svg>
           </button>
         </div>
-        <div className="special s4"></div>
+        <div className="special s4">
+          <button className="circle-icon play" aria-label="Play video">
+            <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M8 5v14l11-7z" /></svg>
+          </button>
+        </div>
       </div>
     </section>
   );

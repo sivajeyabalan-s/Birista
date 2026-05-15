@@ -1,10 +1,10 @@
-import React from 'react';
-import './Services.css';
+import React from "react";
+import "./Services.css";
 
 const Services = () => {
   return (
     <section className="services" id="services">
-      <div className="title-block">
+      <div className="title-block wide">
         <h2 className="section-title">Services</h2>
         <span className="ornament"></span>
       </div>

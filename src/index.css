@@ -104,5 +104,5 @@ body {
   background: url(/assets/ornament.png) center / contain no-repeat;
   transform: scaleY(-1);
 }
-.title-block.wide .ornament { width: 367px; height: 56px; }
+.title-block.wide .ornament { width: 367px; height: 16px; margin-top: -3px; }
 .title-block.thin .ornament { width: 107px; height: 16px; }
