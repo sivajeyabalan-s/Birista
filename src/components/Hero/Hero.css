@@ -46,7 +46,7 @@
   font-family: var(--serif-display);
   font-size: 52px;
   font-weight: 400;
-  color: #fff;
+  color: var(--ivory);
   letter-spacing: 0.1em;
   margin-bottom: 0;
 }
@@ -67,7 +67,7 @@
   font-family: var(--sans);
   font-size: 20px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted-2);
   z-index: 2;
   margin-top: 40px;
   text-align: center;
@@ -125,7 +125,7 @@
 .tag .label {
   font-family: var(--serif);
   font-size: 20px;
-  color: #fff;
+  color: var(--ivory);
   text-align: left;
 }
 

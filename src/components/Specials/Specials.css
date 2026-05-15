@@ -14,11 +14,7 @@
 .special {
   height: 420px;
   border-radius: 8px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: var(--cream);
   position: relative;
   overflow: hidden;
   box-shadow:
@@ -40,7 +36,7 @@
   font-size: 20px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 237, 213, 0.85);
+  color: var(--gold);
   z-index: 1;
   animation: special-blink 1.2s steps(2, start) infinite;
 }
@@ -121,7 +117,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--green);
   opacity: 0;
   transition: opacity 0.3s;
 }

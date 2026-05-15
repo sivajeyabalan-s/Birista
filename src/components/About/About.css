@@ -32,6 +32,7 @@
   padding: 16px;
   margin-top: 0;
   align-self: end;
+  border-top: 2px solid var(--gold);
   box-shadow:
     -2px 4px 10px 0 rgba(145, 145, 145, 0.05),
     -7px 17px 18px 0 rgba(145, 145, 145, 0.04),
@@ -50,13 +51,13 @@
   font-weight: 800;
   font-size: 48px;
   line-height: 1;
-  color: #fff;
+  color: var(--gold);
 }
 
 .about-stat .lbl {
   font-family: var(--serif);
   font-size: 16px;
-  color: var(--text-muted);
+  color: var(--mint);
 }
 
 .about-photos {
@@ -99,7 +100,7 @@
   line-height: 1.15;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--ivory);
   text-align: left;
 }
 
@@ -109,7 +110,7 @@
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-muted-2);
   text-align: left;
 }
 

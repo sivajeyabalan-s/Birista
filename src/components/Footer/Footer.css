@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--divider);
 }
 
 .footer-cols {
@@ -30,7 +30,7 @@
 .footer .col-brand .links {
   font-family: var(--sans);
   font-size: 18px;
-  color: #fff;
+  color: var(--text-muted);
   text-align: center;
   line-height: 1.4;
 }
@@ -57,7 +57,8 @@
 }
 
 .footer .socials a:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(245, 166, 35, 0.18);
+  border-color: rgba(245, 166, 35, 0.4);
   transform: translateY(-2px);
 }
 .footer .socials svg {
@@ -69,7 +70,7 @@
 .footer h4 {
   font-family: var(--serif);
   font-size: 20px;
-  color: #fff;
+  color: var(--gold);
   font-weight: 400;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--divider);
@@ -115,7 +116,7 @@
   font-family: var(--sans);
   font-size: 16px;
   line-height: 32px;
-  color: #fff;
+  color: var(--text-muted-2);
 }
 
 .footer .col-contact .brown-btn {
@@ -132,7 +133,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
-  color: #fff;
+  color: var(--mint);
 }
 
 .copyright {

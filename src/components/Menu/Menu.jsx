@@ -96,7 +96,7 @@ const Menu = () => {
         <Link className="brown-btn" to="/menu">
           Full Menu
           <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
-            <path d="M1 7h18M13 1l6 6-6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M1 7h18M13 1l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
       </motion.div>
