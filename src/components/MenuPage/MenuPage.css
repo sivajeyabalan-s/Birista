@@ -5,6 +5,11 @@
 .menu-page {
   min-height: 100vh;
   background: var(--bg);
+  color: var(--brown);
+}
+
+/* Hero retains white text — it sits on a dark background image */
+.mp-hero {
   color: #fff;
 }
 
@@ -168,17 +173,17 @@
   gap: 14px;
   padding: 10px 22px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(107,42,24,0.06);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(107,42,24,0.16);
   cursor: text;
 }
 
 .mp-search-box svg {
   width: 18px;
   height: 18px;
-  color: #fff;
+  color: var(--brown);
   opacity: 0.9;
   flex-shrink: 0;
 }
@@ -188,20 +193,20 @@
   background: transparent;
   border: 0;
   outline: 0;
-  color: #fff;
+  color: var(--brown);
   font-family: "Marcellus", var(--serif);
   font-size: clamp(15px, 1.5vw, 20px);
   min-width: 0;
 }
 
 .mp-search-box input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-muted-2);
 }
 
 .mp-clear {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted-2);
   font-size: 20px;
   cursor: pointer;
   line-height: 1;
@@ -210,7 +215,7 @@
   transition: color 0.2s;
 }
 .mp-clear:hover {
-  color: #fff;
+  color: var(--brown);
 }
 
 /* Segmented toggle */
@@ -219,10 +224,10 @@
   align-items: center;
   height: 57px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(107,42,24,0.06);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(107,42,24,0.16);
   flex-shrink: 0;
 }
 
@@ -230,7 +235,7 @@
   height: 57px;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--brown);
   font-family: "Marcellus", var(--serif);
   font-size: clamp(14px, 1.3vw, 20px);
   padding: 0 24px;
@@ -261,10 +266,10 @@
   margin: 30px 40px 0;
   height: 70px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(107,42,24,0.06);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(107,42,24,0.14);
   display: flex;
   align-items: center;
 }
@@ -291,7 +296,7 @@
   align-items: center;
   gap: 8px;
   padding: 0 20px;
-  color: #fff;
+  color: var(--brown);
   font-family: "Marcellus", var(--serif);
   font-size: clamp(14px, 1.4vw, 20px);
   cursor: pointer;
@@ -339,7 +344,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--brown);
   cursor: pointer;
   background: transparent;
   border: 0;
@@ -347,7 +352,7 @@
   transition: background 0.2s;
 }
 .mp-cat-arrow:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(107,42,24,0.08);
 }
 .mp-cat-arrow svg {
   width: 18px;
@@ -475,9 +480,9 @@
   gap: 5px;
   padding: 4px 12px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: rgba(107,42,24,0.07);
+  border: 1px solid rgba(107,42,24,0.16);
+  color: var(--brown);
   font-family: "Marcellus", var(--serif);
   font-size: 10px;
   letter-spacing: 0.02em;
@@ -517,9 +522,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #fff;
+  background: rgba(107,42,24,0.07);
+  border: 1px solid rgba(107,42,24,0.16);
+  color: var(--brown);
   cursor: pointer;
   transition:
     color 0.2s,
@@ -556,7 +561,7 @@
 .mp-card-title {
   font-family: "Marcellus", var(--serif);
   font-size: 17px;
-  color: #fff;
+  color: var(--brown);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -567,14 +572,14 @@
 .mp-title-line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(107,42,24,0.15);
 }
 
 .mp-desc {
   font-family: "Jost", var(--sans);
   font-size: 11px;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-muted);
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -604,7 +609,7 @@
   justify-content: center;
   border: 0;
   cursor: pointer;
-  color: #fff;
+  color: var(--brown);
   background: transparent;
   transition:
     background 0.2s,
@@ -617,16 +622,16 @@
   height: 13px;
 }
 .mp-icon-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(107,42,24,0.10);
 }
 
 .mp-icon-btn.primary {
-  background: #fff;
-  color: #000;
+  background: var(--maroon);
+  color: var(--ivory);
 }
 .mp-icon-btn.primary:hover {
-  background: var(--gold-2);
-  color: #000;
+  background: var(--caramel);
+  color: var(--ivory);
   transform: scale(1.06);
 }
 

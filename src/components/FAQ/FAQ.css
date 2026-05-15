@@ -39,7 +39,7 @@
 .faq-q .qtext {
   font-family: var(--serif);
   font-size: 28px;
-  color: #fff;
+  color: var(--brown);
   line-height: 1.1;
   flex: 1;
   text-align: center;
@@ -59,7 +59,7 @@
 .faq-q .chev svg {
   width: 14px;
   height: 8px;
-  stroke: #fff;
+  stroke: var(--brown);
   stroke-width: 2;
   fill: none;
 }
@@ -87,7 +87,7 @@
   font-family: var(--sans);
   font-size: 24px;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
   text-align: center;
 }
 

@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(107,42,24,0.14);
 }
 
 .footer-cols {
@@ -30,7 +30,7 @@
 .footer .col-brand .links {
   font-family: var(--sans);
   font-size: 18px;
-  color: #fff;
+  color: var(--brown);
   text-align: center;
   line-height: 1.4;
 }
@@ -45,31 +45,31 @@
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(107,42,24,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(107,42,24,0.14);
   transition:
     background 0.2s,
     transform 0.2s;
 }
 
 .footer .socials a:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(107,42,24,0.16);
   transform: translateY(-2px);
 }
 .footer .socials svg {
   width: 18px;
   height: 18px;
-  fill: #fff;
+  fill: var(--brown);
 }
 
 .footer h4 {
   font-family: var(--serif);
   font-size: 20px;
-  color: #fff;
+  color: var(--brown);
   font-weight: 400;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--divider);
@@ -87,7 +87,7 @@
   font-family: var(--sans);
   font-size: 16px;
   line-height: 36px;
-  color: #fff;
+  color: var(--brown);
 }
 .footer ul li a {
   display: flex;
@@ -106,7 +106,7 @@
 .footer ul li svg {
   width: 12px;
   height: 12px;
-  stroke: #fff;
+  stroke: var(--brown);
   stroke-width: 2;
   fill: none;
 }
@@ -115,7 +115,7 @@
   font-family: var(--sans);
   font-size: 16px;
   line-height: 32px;
-  color: #fff;
+  color: var(--text-muted);
 }
 
 .footer .col-contact .brown-btn {
@@ -132,7 +132,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
-  color: #fff;
+  color: var(--text-muted);
 }
 
 .copyright {

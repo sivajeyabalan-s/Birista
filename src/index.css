@@ -3,20 +3,20 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* ── Royal Maroon background theme (from PDF brand pages) ── */
-  --bg: #6b2a18;          /* Royal Maroon — the PDF's own brand background */
-  --card: #501407;        /* deeper maroon for nested card surfaces */
-  --card-2: #7a3020;      /* medium maroon — secondary cards */
-  --card-3: #944030;      /* lighter maroon — hover / elevated states */
-  --brown: #6b2a18;       /* Royal Maroon */
-  --brown-light: #d76c1a; /* Caramel Onion */
-  --cream: #ffedd5;       /* Ivory Rice */
-  --gold: #f5a623;        /* Saffron Gold */
-  --gold-2: #d76c1a;      /* Caramel Onion */
-  --text-muted: rgba(255,237,213,0.65);   /* Ivory Rice @ 65% — muted text on maroon */
-  --text-muted-2: rgba(255,237,213,0.80); /* Ivory Rice @ 80% */
-  --divider: rgba(255,237,213,0.15);      /* subtle ivory divider */
-  --green: #88b793;       /* Mint Coriander Green */
+  /* ── Ivory Rice light warm theme ── */
+  --bg: #ffedd5;           /* Ivory Rice — warm parchment background */
+  --card: #fff8f0;         /* warm white — primary card surface */
+  --card-2: #fef0df;       /* cream — secondary card surface */
+  --card-3: rgba(107,42,24,0.07); /* maroon tint — hover / elevated state */
+  --brown: #6b2a18;        /* Royal Maroon — primary text + accents */
+  --brown-light: #d76c1a;  /* Caramel Onion */
+  --cream: #ffedd5;        /* Ivory Rice */
+  --gold: #f5a623;         /* Saffron Gold */
+  --gold-2: #d76c1a;       /* Caramel Onion */
+  --text-muted: rgba(107,42,24,0.60);   /* Royal Maroon @ 60% */
+  --text-muted-2: rgba(107,42,24,0.42); /* Royal Maroon @ 42% */
+  --divider: rgba(107,42,24,0.14);      /* subtle warm divider */
+  --green: #88b793;        /* Mint Coriander Green */
 
   /* Brand palette aliases */
   --maroon: #6b2a18;
@@ -36,7 +36,7 @@ html {
 
 html, body {
   background: var(--bg);
-  color: #fff;
+  color: var(--brown);
   font-family: var(--sans);
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -61,23 +61,23 @@ body {
   border-radius: 24px;
   font-family: var(--serif);
   font-size: 20px;
-  color: var(--maroon);
+  color: var(--ivory);
   text-decoration: none;
   cursor: pointer;
   border: none;
   background:
     url(/assets/btn-texture.png) center / 200% no-repeat,
-    linear-gradient(var(--ivory), var(--ivory));
+    linear-gradient(var(--maroon), var(--maroon));
   background-blend-mode: overlay;
   transition: transform .25s ease;
 }
 .brown-btn:hover { transform: translateY(-1px); }
 
 .glass {
-  background: rgba(255,255,255,0.06);
+  background: rgba(107,42,24,0.05);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(107,42,24,0.12);
   box-shadow:
     -1px 3px 6px 0 rgba(0,0,0,0.08),
     -3px 11px 11px 0 rgba(0,0,0,0.07),
@@ -98,7 +98,7 @@ body {
   font-family: var(--serif);
   font-size: 48px;
   line-height: 1;
-  color: #fff;
+  color: var(--brown);
 }
 
 /* ────────────────── ORNAMENT UTILITY ────────────────── */
