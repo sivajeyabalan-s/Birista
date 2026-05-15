@@ -90,7 +90,7 @@ const Footer = () => {
             Order Online
           </a>
           <div className="address">
-            123 Demo Street, Sample City, TX 75001
+            6377 Custer Rd, Frisco, TX 75035
             <br />
             +1 (555) 123-4567
             <br />
