@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import menuData from "../../data/menu.json";
@@ -227,6 +227,10 @@ export default function MenuPage() {
   const [availableOnly, setAvailableOnly] = useState(false);
   const catsRef = useRef(null);
   const menu = menuData.menu;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const sections = useMemo(() => {
     const keysToShow =

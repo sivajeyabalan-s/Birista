@@ -16,7 +16,7 @@ const FAQ = () => {
   const faqs = [
     { q: "What are your business hours?",        a: "You can find our business hours on the website." },
     { q: "What type of Cuisine do you offer?",   a: "We specialize in authentic South Indian cuisine — biryanis, kebabs, dosas, curries and traditional handcrafted delicacies." },
-    { q: "Do offer Take out Orders?",             a: "Yes — call us or order online and pick up at our Denton location." },
+    { q: "Do offer Take out Orders?",             a: "Yes — call us or order online and pick up at our Frisco location." },
     { q: "Do you Offer Contact-free delivery?",  a: "Absolutely — select contact-free delivery at checkout and we'll leave it at your door." },
   ];
 
